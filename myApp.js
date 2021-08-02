@@ -5,8 +5,9 @@ app.use('/public', express.static(__dirname +'/public'))
 
 
 app.get("/json", (req, res) => {
+  var MESSAGE_STYLE=process.env.MESSAGE_STYLE
   res.json({
-    message: process.env.MESSAGE_STYLE
+    message: MESSAGE_STYLE
   });
 });
 
